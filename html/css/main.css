@@ -31,6 +31,18 @@ body {
   top: calc(var(--index) * 2.8);
   z-index: 1;
 }
+@media only screen and (max-width: 600px) {
+  .logo {
+    --logo-size-mobile: 75px; /* Уменьшаем размер логотипа для мобильных устройств */
+    width: var(--logo-size-mobile);
+    height: var(--logo-size-mobile);
+    left: calc(
+      50% - calc(var(--logo-size-mobile) / 2)
+    ); /* Позиционируем в центре */
+    top: 50px; /* Позиционируем по вертикали в центре */
+    background-size: contain; /* Добавляем это свойство для изменения размера фонового изображения */
+  }
+}
 .layers {
   perspective: 1000px;
   overflow: hidden;
